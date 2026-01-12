@@ -211,7 +211,7 @@ The researchers may get a list of classes taught at UCI. They randomly select 10
 
 ## Stratified Sampling 
 
-In stratified sampling the population is first divided into groups (i.e., strata) and then the sample is selected randomly within each strata.
+In stratified sampling the population is first divided into groups (i.e., strata) and then the sample is selected randomly within each stratum.
 
 
 . . .
