@@ -177,21 +177,31 @@ If the reporter was to repeat this process would she always need 6.692308 failur
 
 $Var(X) = \frac{1-\pi}{\pi^2} = \frac{1-0.13}{0.13^2} = 51.47929$
 
+## Conditions
+
+- The trials have to be independent from each other.
+
+- The probability of success has to be the same for each trial.
+
+- The number of trials is not fixed; trials continue until the first success occurs.
+
+- Each trial outcome is either a success or a failure.
+
 ##
 
 ::: {.callout-warning}
 Note that Geometric distribution is defined slightly differently in the OpenIntro book. We will always use the notation and the pmf provided in these slides.
+
+- We define $X$ to be the number of *failures* before the first success. So does R.
+
+- OpenIntro defines $X$ to be the number of trials required to achieve the first success. This includes the success.
+
 :::
 
 
 # Binomial Distribution
 
-## Conditions
 
-- The trials have to be independent from each other.
-- The probability of success has to be the same for each trial.
-- The number of trials is fixed. 
-- Each trial outcome is either a success or a failure.
 
 
 ## Binomial Distribution
@@ -324,6 +334,13 @@ What is the variance of number of infected animals in 10 selected animals?
 $Var(X) = n\pi(1-\pi)$
 
 $Var(X) = 10\times0.7(1-0.7) = 2.1$
+
+## Conditions
+
+- The trials have to be independent from each other.
+- The probability of success has to be the same for each trial.
+- The number of trials is fixed. 
+- Each trial outcome is either a success or a failure.
 
 
 # Poisson Distribution
@@ -463,8 +480,6 @@ dpois(x = 0, lambda = 12) +
   dpois(x = 1, lambda = 12) +
   dpois(x = 2, lambda = 12)
 
-
-
 ```
 
 . . .
@@ -472,6 +487,15 @@ dpois(x = 0, lambda = 12) +
 ```{r}
 ppois(q = 2, lambda = 12)
 ```
+
+
+## R Summary
+
+| Distribution | $f(x)$ in R | $F(x)$ in R |
+| :--- | :--- | :--- |
+| **Geometric** | `dgeom(x, prob)` | `pgeom(q, prob)` |
+| **Binomial** | `dbinom(x, size, prob)` | `pbinom(q, size, prob)` |
+| **Poisson** | `dpois(x, lambda)` | `ppois(q, lambda)` |
 
 
 ## Learning Tip of the Day
